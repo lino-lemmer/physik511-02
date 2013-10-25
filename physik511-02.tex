@@ -1,0 +1,51 @@
+\input{header.tex}
+
+\renewcommand\thesection{Übung \arabic{section}:}
+\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}:}
+
+\title{physik511: Übungsblatt 01}
+\author{Lino Lemmer}
+
+\begin{document}
+\maketitle
+\section{Feinstrukturkonstante}
+
+\begin{align*}
+    \sbr{e} &= \si{\coulomb^2} \\
+    \sbr{\epsilon_0} &= \si{\ampere\second\per\volt\per\meter} = \si{\coulomb^2 \per\joule \per\meter} \\
+    \sbr{\hbar} &= \si{\joule\second} \\
+    \sbr{c} &= \si{\meter\per\second} \\
+    \sbr\alpha &= \frac {\sbr{e}^2} {\sbr{\epsilon_0} \cdot \sbr{\hbar} \cdot \sbr{c}} \\
+               &= \frac {\si{\coulomb^2 \joule \meter \second}}{\si{\coulomb^2 \joule \second \meter}} \\
+               &= 1
+\end{align*}
+
+\section{Auflösungsvermögen}
+
+\subsection{Röntgenstrahlung}
+
+Da die kleineste auflösbare Struktur nicht kleiner sein kann als die Wellenlänge, muss die Wellenlänge atomarer Größenordnung sein, also $\lambda \le \SI{0.1}{\nano\meter}$.
+
+\subsection{Materiestrahl}
+
+\begin{align*}
+    \SI{1}{\femto\meter} &\ge \lambda_\text{DB} = \frac hp \\
+    \implies \qquad p &\ge \frac h{\SI{1}{\femto\meter}} \\
+    p &\ge \SI{6.626e-19}{\newton\second}
+\end{align*}
+
+\section{Energie-Impuls-Beziehung}
+
+\begin{align*}
+    M^2c^4 &= E^2 - p^2c^2 \\
+    \iff \qquad E^2 &= p^2c^2 + M^2c^4 \\
+    \iff \qquad E &= \sqrt{p^2c^2 + M^2c^4} \\
+                  &= Mc^2 \sqrt{1+\frac{p^2}{M^2c^2}}
+    \intertext{Durch Taylor-Entwicklung um \num{1}:}
+                  &= Mc^2 \del{1+\half\frac{p^2}{M^2c^2}} \\
+                  &= Mc^2 + \frac{p^2}{2M}
+    \intertext{Da man die kinetische Energie aus $E - Mc^2$ erhält, ergibt sich}
+    E_\text{kin} &= \frac{p^2}{2M}
+\end{align*}
+
+\end{document}
